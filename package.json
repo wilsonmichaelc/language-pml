@@ -1,0 +1,12 @@
+{
+  "name": "language-pml",
+  "version": "0.1.0",
+  "description": "Syntax highlighter and snippets for Phoenix Modeling Language",
+  "keywords": [],
+  "repository": "https://github.com/wilsonmichaelc/language-pml",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {}
+}

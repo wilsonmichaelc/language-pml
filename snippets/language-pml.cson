@@ -1,0 +1,422 @@
+'.source.pml':
+  'Indirect Response Model':
+    'prefix': 'ird'
+    'body': """
+      test(){
+        deriv(E = Kin * (1 + Emax * C / (C + EC50)) - Kout * E)
+        cfMicro(A1, Cl / V)
+        dosepoint(A1)
+        C = A1 / V
+        sequence{E = Kin / Kout}
+        error(CEps = 1)
+        observe(CObs = C + CEps)
+        error(EEps = 1)
+        observe(EObs = E + EEps)
+        stparm(
+          V = tvV * exp(nV)
+          Cl = tvCl * exp(nCl)
+          Kin = tvKin * exp(nKin)
+          Kout = tvKout * exp(nKout)
+          Emax = tvEmax * exp(nEmax)
+          EC50 = tvEC50 * exp(nEC50)
+        )
+        fixef(
+          tvV = c(, 1, )
+          tvCl = c(, 1, )
+          tvKin = c(, 1, )
+          tvKout = c(, 1, )
+          tvEmax = c(, 1, )
+          tvEC50 = c(, 1, )
+        )
+        ranef(diag(nV, nCl, nKin, nKout, nEmax, nEC50) = c(1, 1, 1, 1, 1, 1))
+      }
+    """
+  'Extravascular Closed Form':
+    'prefix': '1cmt_ev_cf'
+    'body': """
+      test(){
+      	cfMicro(A1, Cl / V, first = (Aa = Ka))
+      	dosepoint(Aa)
+      	C = A1 / V
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		Ka = tvKa * exp(nKa)
+      		V = tvV * exp(nV)
+      		Cl = tvCl * exp(nCl)
+      	)
+      	fixef(
+      		tvKa = c(, 1, )
+      		tvV = c(, 1, )
+      		tvCl = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl, nKa) = c(1, 1, 1))
+      }
+    """
+  'Extravascular Infusion Possible Closed Form':
+    'prefix': '1cmt_ev_inf_cf'
+    'body': """
+      test(){
+      	cfMicro(A1, Cl / V, first = (Aa = Ka))
+      	dosepoint(Aa)
+      	C = A1 / V
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		Ka = tvKa * exp(nKa)
+      		V = tvV * exp(nV)
+      		Cl = tvCl * exp(nCl)
+      	)
+      	fixef(
+      		tvKa = c(, 1, )
+      		tvV = c(, 1, )
+      		tvCl = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl, nKa) = c(1, 1, 1))
+      }
+    """
+  'Extravascular Infusion Possible Open Form':
+    'prefix': '1cmt_ev_inf_of'
+    'body': """
+      test(){
+      	deriv(Aa = - Ka * Aa)
+      	deriv(A1 = Ka * Aa - Cl * C)
+      	dosepoint(Aa)
+      	C = A1 / V
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		Ka = tvKa * exp(nKa)
+      		V = tvV * exp(nV)
+      		Cl = tvCl * exp(nCl)
+      	)
+      	fixef(
+      		tvKa = c(, 1, )
+      		tvV = c(, 1, )
+      		tvCl = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl, nKa) = c(1, 1, 1))
+      }
+    """
+  'Extravascular Open Form':
+    'prefix': '1cmt_ev_of'
+    'body': """
+      test(){
+      	deriv(Aa = - Ka * Aa)
+      	deriv(A1 = Ka * Aa - Cl * C)
+      	dosepoint(Aa)
+      	C = A1 / V
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		Ka = tvKa * exp(nKa)
+      		V = tvV * exp(nV)
+      		Cl = tvCl * exp(nCl)
+      	)
+      	fixef(
+      		tvKa = c(, 1, )
+      		tvV = c(, 1, )
+      		tvCl = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl, nKa) = c(1, 1, 1))
+      }
+    """
+  'Intravenous Infusion Possible':
+    'prefix': '1cmt_iv_inf'
+    'body': """
+      test(){
+      	cfMicro(A1, Cl / V)
+      	dosepoint(A1)
+      	C = A1 / V
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		V = tvV * exp(nV)
+      		Cl = tvCl * exp(nCl)
+      	)
+      	fixef(
+      		tvV = c(, 1, )
+      		tvCl = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl) = c(1, 1))
+      }
+    """
+  'Intravenous Open Form':
+    'prefix': '1cmt_iv_of'
+    'body': """
+      test(){
+      	deriv(A1 = - Cl * C)
+      	dosepoint(A1)
+      	C = A1 / V
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		V = tvV * exp(nV)
+      		Cl = tvCl * exp(nCl)
+      	)
+      	fixef(
+      		tvV = c(, 1, )
+      		tvCl = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl) = c(1, 1))
+      }
+    """
+  'Intravenous Infusion Possible Open Form':
+    'prefix': '1cmt_iv_inf_of'
+    'body': """
+      test(){
+      	deriv(A1 = - Cl * C)
+      	dosepoint(A1)
+      	C = A1 / V
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		V = tvV * exp(nV)
+      		Cl = tvCl * exp(nCl)
+      	fixef(
+      		tvV = c(, 1, )
+      		tvCl = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl) = c(1, 1))
+      }
+    """
+  'Intravenous Closed Form':
+    'prefix': '1cmt_iv_cf'
+    'body': """
+      test(){
+      	cfMicro(A1, Cl / V)
+      	dosepoint(A1)
+      	C = A1 / V
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		V = tvV * exp(nV)
+      		Cl = tvCl * exp(nCl)
+      	)
+      	fixef(
+      		tvV = c(, 1, )
+      		tvCl = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl) = c(1, 1))
+      }
+    """
+  'Intravenous Closed Form':
+    'prefix': '2cmt_iv_cf'
+    'body': """
+      test(){
+      	cfMicro(A1, Cl / V, Cl2 / V, Cl2 / V2)
+      	dosepoint(A1)
+      	C = A1 / V
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		V = tvV * exp(nV)
+      		V2 = tvV2 * exp(nV2)
+      		Cl = tvCl * exp(nCl)
+      		Cl2 = tvCl2 * exp(nCl2)
+      	)
+      	fixef(tvV = c(, 1, ))
+      	fixef(tvV2 = c(, 1, ))
+      	fixef(tvCl = c(, 1, ))
+      	fixef(tvCl2 = c(, 1, ))
+      	ranef(diag(nV, nCl, nV2, nCl2) = c(1, 1, 1, 1))
+      }
+    """
+  'Intravenous Infusion Possible Closed Form':
+    'prefix': '2cmt_iv_inf_cf'
+    'body': """
+      test(){
+      	cfMicro(A1, Cl / V, Cl2 / V, Cl2 / V2)
+      	dosepoint(A1)
+      	C = A1 / V
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		V = tvV * exp(nV)
+      		V2 = tvV2 * exp(nV2)
+      		Cl = tvCl * exp(nCl)
+      		Cl2 = tvCl2 * exp(nCl2)
+      	)
+      	fixef(
+      		tvV = c(, 1, )
+      		tvV2 = c(, 1, )
+      		tvCl = c(, 1, )
+      		tvCl2 = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl, nV2, nCl2) = c(1, 1, 1, 1))
+      }
+    """
+  'Intravenous Infusion Possible Open Form':
+    'prefix': '2cmt_iv_inf_of'
+    'body': """
+      test(){
+      	deriv(A1 = - Cl * C - Cl2 * (C - C2))
+      	deriv(A2 = Cl2 * (C - C2))
+      	dosepoint(A1)
+      	C = A1 / V
+      	C2 = A2 / V2
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		V = tvV * exp(nV)
+      		V2 = tvV2 * exp(nV2)
+      		Cl = tvCl * exp(nCl)
+      		Cl2 = tvCl2 * exp(nCl2)
+      	)
+      	fixef(
+      		tvV = c(, 1, )
+      		tvV2 = c(, 1, )
+      		tvCl = c(, 1, )
+      		tvCl2 = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl, nV2, nCl2) = c(1, 1, 1, 1))
+      }
+    """
+  'Intravenous Open Form':
+    'prefix': '2cmt_iv_of'
+    'body': """
+      test(){
+      	deriv(A1 = - Cl * C - Cl2 * (C - C2))
+      	deriv(A2 = Cl2 * (C - C2))
+      	dosepoint(A1)
+      	C = A1 / V
+      	C2 = A2 / V2
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		V = tvV * exp(nV)
+      		V2 = tvV2 * exp(nV2)
+      		Cl = tvCl * exp(nCl)
+      		Cl2 = tvCl2 * exp(nCl2)
+      	)
+      	fixef(
+      		tvV = c(, 1, )
+      		tvV2 = c(, 1, )
+      		tvCl = c(, 1, )
+      		tvCl2 = c(, 1, )
+      	)
+      	ranef(diag(nV, nCl, nV2, nCl2) = c(1, 1, 1, 1))
+      }
+    """
+  'Allometric One Compartment':
+    'prefix': '1cmt_alo'
+    'body': """
+      test(){
+        cfMicro(A1, Cl / V, first = (Aa = Ka))
+        dosepoint(Aa)
+        C = A1 / V
+        error(CEps = 0.1)
+        observe(CObs = C + CEps * sqrt(1 + C^2 * (CMultStdev/sigma())^2))
+        stparm(
+          Ka = tvKa * exp(nKa)
+          V = tvV * WT^dVdWT * exp(nV)
+          Cl = tvCl * WT^dCldWT * exp(nCl)
+          CMultStdev = tvCMultStdev
+        )
+        fcovariate(WT)
+        fixef(
+          tvKa = c(0, 1, )
+          tvV = c(0, 0.5, )
+          tvCl = c(0, 0.3, )
+          tvCMultStdev = c(0, 0.1, )
+          dVdWT(freeze) = c(, 1, )
+          dCldWT(freeze) = c(, 0.75, )
+        )
+        ranef(diag(nV, nCl, nKa) = c(0.1, 0.1, 0.1))
+      }
+    """
+  'Allometric Two Compartment':
+    'prefix': '2cmt_alo'
+    'body': """
+      test(){
+        cfMicro(A1, Cl / V, Cl2 / V, Cl2 / V2, first = (Aa = Ka))
+        dosepoint(Aa)
+        C = A1 / V
+        error(CEps = 0.1)
+        observe(CObs = C + CEps * sqrt(1 + C^2 * (CMultStdev/sigma())^2))
+        stparm(
+          Ka = tvKa * exp(nKa)
+          V = tvV * WT^dVdWT * exp(nV)
+          V2 = tvV2 * WT^dV2dWT * exp(nV2)
+          Cl = tvCl * WT^dCldWT * exp(nCl)
+          Cl2 = tvCl2 * WT^dCl2dWT * exp(nCl2)
+          CMultStdev = tvCMultStdev)
+        )
+        fcovariate(WT)
+        fixef(
+          tvKa = c(0, 1, )
+          tvV = c(0, 0.5, )
+          tvV2 = c(0, 1, )
+          tvCl = c(0, 0.3, )
+          tvCl2 = c(0, 0.1, )
+          tvCMultStdev = c(0, 0.1, )
+          dVdWT(freeze) = c(, 1, )
+          dV2dWT(freeze) = c(, 1, )
+          dCldWT(freeze) = c(, 0.75, )
+          dCl2dWT(freeze) = c(, 0.75, )
+        )
+        ranef(diag(nV, nCl, nKa, nV2, nCl2) = c(0.1, 0.1, 0.1, 0.1, 0.1))
+      }
+    """
+  'One Compartment Emax IV Bolus':
+    'prefix': '1cmt_emax_iv_bolus'
+    'body': """
+    test(){
+    	cfMicro(A1, Cl / V)
+    	dosepoint(A1)
+    	C = A1 / V
+    	E = Emax * C / (EC50 + C)
+    	error(CEps = 1)
+    	observe(CObs = C + CEps)
+    	error(EEps = 1)
+    	observe(EObs = E + EEps)
+    	stparm(
+    		V = tvV * exp(nV)
+    		Cl = tvCl * exp(nCl)
+    		EC50 = tvEC50 * exp(nEC50)
+    		Emax = tvEmax * exp(nEmax)
+    	)
+    	fixef(
+    		tvV = c(, 1, )
+    		tvCl = c(, 1, )
+    		tvEC50 = c(, 1, )
+    		tvEmax = c(, 1, )
+    	)
+    	ranef(
+    		diag(nV, nCl, nEC50, nEmax) = c(1, 1, 1, 1)
+    	)
+    }
+    """
+  'Two Compartment Emax IV Bolus':
+    'prefix': '2cmt_emax_iv_bolus'
+    'body': """
+      test(){
+      	cfMicro(A1, Cl / V, Cl2 / V, Cl2 / V2)
+      	dosepoint(A1)
+      	C = A1 / V
+      	E = Emax * C / (EC50 + C)
+      	error(EEps = 1)
+      	observe(EObs = E + EEps)
+      	error(CEps = 1)
+      	observe(CObs = C + CEps)
+      	stparm(
+      		V = tvV * exp(nV)
+      		V2 = tvV2 * exp(nV2)
+      		Cl = tvCl * exp(nCl)
+      		Cl2 = tvCl2 * exp(nCl2)
+      		EC50 = tvEC50 * exp(nEC50)
+      		Emax = tvEmax * exp(nEmax)
+      	)
+      	fixef(
+      		tvV = c(, 1, )
+      		tvV2 = c(, 1, )
+      		tvCl = c(, 1, )
+      		tvCl2 = c(, 1, )
+      		tvEC50 = c(, 1, )
+      		tvEmax = c(, 1, )
+      	)
+      	ranef(
+      		diag(nV, nCl, nEmax, nEC50, nV2, nCl2) = c(1, 1, 1, 1, 1, 1)
+      	)
+      }
+    """
