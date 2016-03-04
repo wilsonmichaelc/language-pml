@@ -1,0 +1,438 @@
+{
+  "functions": [
+    {
+      "text": "cfMicro",
+      "snippet": "cfMacro(${1:id}, ${2:expression}, ${3:options})${4}",
+      "type": "function",
+      "leftLabel": "BOOL",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/"
+    },
+    {
+      "text": "cfMacro",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "cfMacro(${1:id}, ${2:expression}, ${3:options})${4}"
+    },
+    {
+      "text": "cfMacro",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "cfMacro(${1:A1}, ${2:C1}, ${3:dose}, ${4:A}, ${5:Alpha})${6}"
+    },
+    {
+      "text": "cfMacro",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "cfMacro(${1:A1}, ${2:C1}, ${3:dose}, ${4:A}, ${5:Alpha}, ${6:Ka})${7}"
+    },
+    {
+      "text": "cfMacro",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "cfMacro(${1:A1}, ${2:C1}, ${3:dose}, ${4:A}, ${5:Alpha}, ${6:B}, ${7:Beta})${8}"
+    },
+    {
+      "text": "cfMacro",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "cfMacro(${1:A1}, ${2:C1}, ${3:dose}, ${4:A}, ${5:Alpha}, ${6:B}, ${7:Beta}, ${8:Ka})${9}"
+    },
+    {
+      "text": "cfMacro",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "cfMacro(${1:A1}, ${2:C1}, ${3:dose}, ${4:A}, ${5:Alpha}, ${6:B}, ${7:Beta}, ${8:C}, ${9:Gamma})${10}"
+    },
+    {
+      "text": "cfMacro",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "cfMacro(${1:A1}, ${2:C1}, ${3:dose}, ${4:A}, ${5:Alpha}, ${6:B}, ${7:Beta}, ${8:C}, ${9:Gamma}, ${10:Ka})${11}"
+    },
+    {
+      "text": "fixef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "fixef(${1:param})${2}"
+    },
+    {
+      "text": "fixef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "fixef(${1:param} = ${2:init})${3}"
+    },
+    {
+      "text": "fixef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "fixef(${1:param}(freeze) = ${2:fixed-init})${3}"
+    },
+    {
+      "text": "fixef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "fixef(${1:param} = c(${2:low}, ${3:init}, ${4:high}))${5}"
+    },
+    {
+      "text": "fixef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "fixef(${1:param}(enable = c(1)) = c(${2:low}, ${3:init}, ${4:high}))${5}"
+    },
+    {
+      "text": "ranef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ranef(${1:param})${2}"
+    },
+    {
+      "text": "ranef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ranef(${1:param} = ${2:val})${3}"
+    },
+    {
+      "text": "ranef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ranef(diag(${1:param1}, ${2:param2}))${3}"
+    },
+    {
+      "text": "ranef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ranef(diag(${1:param1}, ${2:param2}) = c(${3}, ${4}, ${5}))${6}"
+    },
+    {
+      "text": "ranef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ranef(same(${1:param1}, ${2:param2}))"
+    },
+    {
+      "text": "ranef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ranef(block(${1:param1}, ${2:param2}))${3}"
+    },
+    {
+      "text": "ranef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ranef(block(${1:param1}, ${2:param2}) = c(${3}, ${4}, ${5}))${6}"
+    },
+    {
+      "text": "ranef",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ranef(block(${1:param1}, ${2:param2}) (freeze) = c(${3}, ${4}, ${5}))${6}"
+    },
+    {
+      "text": "stparm",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.lumaryland.edu/",
+      "snippet": "stparm(${1:param} = ${2:expression})${3}"
+    },
+    {
+      "text": "factorial",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "factorial(${1:x})${2}"
+    },
+    {
+      "text": "phi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "phi(${1:x})${2}"
+    },
+    {
+      "text": "lphi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "lphi(${1:x}, ${2:stdev})${3}"
+    },
+    {
+      "text": "probit",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "probit(${1:x})${2}"
+    },
+    {
+      "text": "iprobit",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "iprobit(${1:x})${2}"
+    },
+    {
+      "text": "ilogit",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ilogit(${1:x})${2}"
+    },
+    {
+      "text": "iloglog",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "iloglog(${1:x})${2}"
+    },
+    {
+      "text": "icloglog",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "icloglog(${1:x})${2}"
+    },
+    {
+      "text": "lambertw",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "lambertw(${1:x})${2}"
+    },
+    {
+      "text": "lgamm",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "lgamm(${1:x})${2}"
+    },
+    {
+      "text": "lnorm",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "lnorm(${1:x}, ${2:s})${3}"
+    },
+    {
+      "text": "lpois",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "lpois(${1:mean}, ${2:n})${3}"
+    },
+    {
+      "text": "lnegbin",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "lnegbin(${1:r}, ${2:p}, ${3:n})${4}"
+    },
+    {
+      "text": "erfunc",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "erfunc(${1:x})${2}"
+    },
+    {
+      "text": "count",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "count(${1:N}, ${2:haz})${3}"
+    },
+    {
+      "text": "covariate",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "count(${1:cov1})${2}"
+    },
+    {
+      "text": "deriv",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "deriv(${1:variable definition})${2}",
+      "description": "A differential equation statement"
+    },
+    {
+      "text": "dosepoint",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "dosepoint${1}(${2:A1})${3}"
+    },
+    {
+      "text": "double",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "double(${1:variable})${2}"
+    },
+    {
+      "text": "event",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "event(${1:occur}, ${2:haz})${3}"
+    },
+    {
+      "text": "fcovariate",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "fcovariate(${1:cov1})${2}"
+    },
+    {
+      "text": "include",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "include(${1:sPath})${2}"
+    },
+    {
+      "text": "interpolate",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "interpolate(${1:cov1})${2}"
+    },
+    {
+      "text": "iwndf",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "iwndf(${1:ndf})${2}"
+    },
+    {
+      "text": "LL",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "LL(${1:Obs}, ${2:ll})${3}"
+    },
+    {
+      "text": "multi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "multi(${1:K}, ${2:ilogit}, ${3:x1})${4}"
+    },
+    {
+      "text": "multi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "multi(${1:K}, ${2:ilogit}, ${3:x1}, ${4:x2})${5}"
+    },
+    {
+      "text": "multi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "multi(${1:K}, ${2:ilogit}, ${3:x1}, ${4:x2}, ${5:x3})${6}"
+    },
+    {
+      "text": "multi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "multi(${1:K}, ${2:ilogit}, ${3:x1}, ${4:x2}, ${5:x3}, ${6:x4})${7}"
+    },
+    {
+      "text": "multi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "multi(${1:K}, ${2:ilogit}, ${3:x1}, ${4:x2}, ${5:x3}, ${6:x4}, ${7:x5})${8}"
+    },
+    {
+      "text": "multi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "multi(${1:K}, ${2:ilogit}, ${3:x1}, ${4:x2}, ${5:x3}, ${6:x4}, ${7:x5}, ${8:x6})${9}"
+    },
+    {
+      "text": "multi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "multi(${1:K}, ${2:ilogit}, ${3:x1}, ${4:x2}, ${5:x3}, ${6:x4}, ${7:x5}, ${8:x6}, ${9:x7})${10}"
+    },
+    {
+      "text": "multi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "multi(${1:K}, ${2:ilogit}, ${3:x1}, ${4:x2}, ${5:x3}, ${6:x4}, ${7:x5}, ${8:x6}, ${9:x7}, ${10:x8})${11}"
+    },
+    {
+      "text": "multi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "multi(${1:K}, ${2:ilogit}, ${3:x1}, ${4:x2}, ${5:x3}, ${6:x4}, ${7:x5}, ${8:x6}, ${9:x7}, ${10:x8}, ${11:x9})${12}"
+    },
+    {
+      "text": "multi",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "multi(${1:K}, ${2:ilogit}, ${3:x1}, ${4:x2}, ${5:x3}, ${6:x4}, ${7:x5}, ${8:x6}, ${9:x7}, ${10:x8}, ${11:x9}, ${12:x10})${13}"
+    },
+    {
+      "text": "observe",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "observe(${1:time}, ${2:observable})${3}"
+    },
+    {
+      "text": "observe",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "observe(${1:statement})${2}"
+    },
+    {
+      "text": "observe1",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "observe1(${1:variable})${2}"
+    },
+    {
+      "text": "ordinal",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ordinal(${1:K}, ${2:ilogit}, ${3:x}, ${4:b}, ${5:a1})${6}"
+    },
+    {
+      "text": "ordinal",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ordinal(${1:K}, ${2:ilogit}, ${3:x}, ${4:b}, ${5:a1}, ${6:a2}})${7}"
+    },
+    {
+      "text": "ordinal",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ordinal(${1:K}, ${2:ilogit}, ${3:x}, ${4:b}, ${5:a1}, ${6:a2}, ${7:a3})${8}"
+    },
+    {
+      "text": "ordinal",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ordinal(${1:K}, ${2:ilogit}, ${3:x}, ${4:b}, ${5:a1}, ${6:a2}, ${7:a3}, ${8:a4})${9}"
+    },
+    {
+      "text": "ordinal",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ordinal(${1:K}, ${2:ilogit}, ${3:x}, ${4:b}, ${5:a1}, ${6:a2}, ${7:a3}, ${8:a4}, ${9:a5})${10}"
+    },
+    {
+      "text": "ordinal",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ordinal(${1:K}, ${2:ilogit}, ${3:x}, ${4:b}, ${5:a1}, ${6:a2}, ${7:a3}, ${8:a4}, ${9:a5}, ${10:a6})${11}"
+    },
+    {
+      "text": "ordinal",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ordinal(${1:K}, ${2:ilogit}, ${3:x}, ${4:b}, ${5:a1}, ${6:a2}, ${7:a3}, ${8:a4}, ${9:a5}, ${10:a6}, ${11:a7})${12}"
+    },
+    {
+      "text": "ordinal",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ordinal(${1:K}, ${2:ilogit}, ${3:x}, ${4:b}, ${5:a1}, ${6:a2}, ${7:a3}, ${8:a4}, ${9:a5}, ${10:a6}, ${11:a7}, ${12:a8})${13}"
+    },
+    {
+      "text": "ordinal",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ordinal(${1:K}, ${2:ilogit}, ${3:x}, ${4:b}, ${5:a1}, ${6:a2}, ${7:a3}, ${8:a4}, ${9:a5}, ${10:a6}, ${11:a7}, ${12:a8}, ${13:a9})${14}"
+    },
+    {
+      "text": "ordinal",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "ordinal(${1:K}, ${2:ilogit}, ${3:x}, ${4:b}, ${5:a1}, ${6:a2}, ${7:a3}, ${8:a4}, ${9:a5}, ${10:a6}, ${11:a7}, ${12:a8}, ${13:a9}, ${14:a10})${15}"
+    },
+    {
+      "text": "real",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "real(${1:variable})${2}"
+    },
+    {
+      "text": "transit",
+      "type": "function",
+      "descriptionMoreURL": "http://ctm.umaryland.edu/",
+      "snippet": "real(${1:A}, ${2:trt}, ${3:n})${4}"
+    }
+  ]
+}

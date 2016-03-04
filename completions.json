@@ -1,0 +1,152 @@
+{
+  "keywords": [
+    {
+      "text": "A1",
+      "type": "keyword",
+      "rightLabel": "Central compartment",
+      "description": "Typical variable name of central compartment"
+    },
+    {
+      "text": "C1",
+      "type": "keyword",
+      "rightLabel": "Concentration",
+      "description": "Typical variable name of concentration in central compartment"
+    },
+    {
+      "text": "dose",
+      "type": "keyword",
+      "rightLabel": "Initial Dose",
+      "description": "Name of variable that will contain initial dose amount"
+    },
+    {
+      "text": "A",
+      "type": "keyword",
+      "description": "Coefficient of 1st term"
+    },
+    {
+      "text": "Alpha",
+      "type": "keyword",
+      "description": "Exponent of 1st term"
+    },
+    {
+      "text": "B",
+      "type": "keyword",
+      "description": "Coefficient of 2nd term"
+    },
+    {
+      "text": "Beta",
+      "type": "keyword",
+      "description": "Exponent of 2nd term"
+    },
+    {
+      "text": "C",
+      "type": "keyword",
+      "description": "Coefficient of 3rd term"
+    },
+    {
+      "text": "Gamma",
+      "type": "keyword",
+      "description": "Exponent of 3rd term"
+    },
+    {
+      "text": "Ka",
+      "type": "keyword",
+      "description": "Extravascular absorption rate"
+    },
+    {
+      "text": "Ke",
+      "type": "keyword",
+      "description": "Exponent of the 1st term"
+    },
+    {
+      "text": "K12",
+      "type": "keyword",
+      "description": "Rate from central cpt to cpt 2"
+    },
+    {
+      "text": "K21",
+      "type": "keyword",
+      "description": "Rate from cpt 2 to central cpt"
+    },
+    {
+      "text": "K13",
+      "type": "keyword",
+      "description": "Rate from central cpt to cpt 3"
+    },
+    {
+      "text": "K31",
+      "type": "keyword",
+      "description": "Rate from cpt 2 to central cpt"
+    },
+    {
+      "text": "N",
+      "type": "keyword",
+      "description": "Name of the observed count variable"
+    },
+    {
+      "text": "haz",
+      "type": "keyword",
+      "description": "Expression giving hazard rate - i.e. expected number of occurrences"
+    },
+    {
+      "text": "cov",
+      "type": "keyword",
+      "description": "Name of a covariate."
+    },
+    {
+      "text": "sPath",
+      "type": "keyword",
+      "description": "File path and name of file to include in C code"
+    },
+    {
+      "text": "observation",
+      "type": "keyword",
+      "description": "Name of observed variable"
+    },
+    {
+      "text": "ll",
+      "type": "keyword",
+      "description": "Expression giving user-specified log-likelihood of the observation"
+    },
+    {
+      "text": "ndf",
+      "type": "keyword",
+      "description": "Integer number of degrees of freedom"
+    },
+    {
+      "text": "time",
+      "type": "keyword",
+      "description": "Time variable"
+    },
+    {
+      "text": "observable",
+      "type": "keyword",
+      "description": "Name of observable variable"
+    },
+    {
+      "text": "statement",
+      "type": "keyword",
+      "description": "Statement to be observed"
+    },
+    {
+      "text": "x",
+      "type": "keyword",
+      "description": "Prediction"
+    },
+    {
+      "text": "b",
+      "type": "keyword",
+      "description": "Slope"
+    },
+    {
+      "text": "a1",
+      "type": "keyword",
+      "description": "Intercept 1"
+    },
+    {
+      "text": "K",
+      "type": "keyword",
+      "description": "Name of observed variable"
+    }
+  ]
+}

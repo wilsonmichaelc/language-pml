@@ -1,12 +1,19 @@
 {
   "name": "language-pml",
   "version": "0.2.0",
-  "description": "Syntax highlighter and snippets for Phoenix Modeling Language",
+  "description": "Syntax highlighting, snippets, and autocomplete for Phoenix Modeling Language",
   "keywords": [],
   "repository": "https://github.com/wilsonmichaelc/language-pml",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getProvider"
+      }
+    }
+  }
 }
